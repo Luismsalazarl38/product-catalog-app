@@ -1,0 +1,52 @@
+/* Estilos existentes */
+.product-card {
+    max-width: 100%;
+    margin: 10px;
+    position: relative; /* Añadido para posicionar el botón de corazón */
+  }
+  
+  .product-card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .product-card-content {
+    padding: 10px;
+  }
+  
+  .product-card-title {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+  }
+  
+  .product-card-price {
+    font-weight: bold;
+    color: #4caf50;
+  }
+  
+  .product-card-description {
+    font-size: 0.9em;
+    color: #666;
+  }
+  
+  /* Nuevos estilos para el botón de corazón */
+  .wishlist-button-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10; /* Asegura que el botón esté por encima de la imagen */
+  }
+  
+  .wishlist-button {
+    --padding-start: 0;
+    --padding-end: 0;
+    --background: rgba(255, 255, 255, 0.7);
+    --border-radius: 50%;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .wishlist-button ion-icon {
+    font-size: 24px;
+  }

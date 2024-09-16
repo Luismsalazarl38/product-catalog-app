@@ -1,0 +1,55 @@
+.home-grid {
+    margin: 20px;
+  }
+  
+  .home-grid .featured-card {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .home-grid .featured-card-img {
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  .home-grid .featured-card .ion-card-header {
+    background: #e9ecef;
+  }
+  
+  .cta-grid {
+    margin: 20px;
+  }
+  
+  .cta-col {
+    text-align: center;
+  }
+  
+  .cta-card {
+    background: #f1f3f5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cta-card h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+  }
+  
+  .cta-card p {
+    margin-bottom: 20px;
+  }
+  
+  .ion-button.dark {
+    --color: #212529;
+    --color-activated: #343a40;
+    --color-focused: #495057;
+    --background: #e9ecef;
+    --background-activated: #dee2e6;
+    --background-focused: #ced4da;
+  }
+  

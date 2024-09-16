@@ -1,7 +1,12 @@
-import { Redirect, Route } from 'react-router-dom';
+import { Redirect, Route, Switch } from 'react-router-dom';
 import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import Home from './pages/Home';
+import Products from './pages/Products';
+import Categories from './pages/Categories';
+import Header from './components/Header';
+import WishlistPage from './pages/WishlistPage';
+import { WishlistProvider } from './context/WishlistContext'; // Importa el WishlistProvider
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -19,15 +24,7 @@ import '@ionic/react/css/text-transformation.css';
 import '@ionic/react/css/flex-utils.css';
 import '@ionic/react/css/display.css';
 
-/**
- * Ionic Dark Mode
- * -----------------------------------------------------
- * For more info, please see:
- * https://ionicframework.com/docs/theming/dark-mode
- */
-
-/* import '@ionic/react/css/palettes/dark.always.css'; */
-/* import '@ionic/react/css/palettes/dark.class.css'; */
+/* Ionic Dark Mode */
 import '@ionic/react/css/palettes/dark.system.css';
 
 /* Theme variables */
@@ -37,16 +34,28 @@ setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
-    <IonReactRouter>
-      <IonRouterOutlet>
-        <Route exact path="/home">
-          <Home />
-        </Route>
-        <Route exact path="/">
-          <Redirect to="/home" />
-        </Route>
-      </IonRouterOutlet>
-    </IonReactRouter>
+    <WishlistProvider>
+      <IonReactRouter>
+        <Header title="Product App" />
+        <IonRouterOutlet>
+          <Switch>
+            <Route exact path="/wishlist" component={WishlistPage} />
+            <Route exact path="/home">
+              <Home />
+            </Route>
+            <Route exact path="/products">
+              <Products />
+            </Route>
+            <Route exact path="/categories">
+              <Categories />
+            </Route>
+            <Route exact path="/">
+              <Redirect to="/home" />
+            </Route>
+          </Switch>
+        </IonRouterOutlet>
+      </IonReactRouter>
+    </WishlistProvider>
   </IonApp>
 );
 

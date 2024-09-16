@@ -1,0 +1,14 @@
+.product-card {
+    margin: 10px;
+    /* Ajusta el margen según sea necesario */
+  }
+  
+  .product-card-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .product-card-content {
+    padding: 10px;
+  }
+  
